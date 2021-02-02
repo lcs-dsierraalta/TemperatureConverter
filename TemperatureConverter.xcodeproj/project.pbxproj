@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		394CF65B25C9E650001AC9A7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394CF65A25C9E650001AC9A7 /* main.swift */; };
+		394CF66325C9E679001AC9A7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394CF66225C9E679001AC9A7 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		394CF65725C9E650001AC9A7 /* TemperatureConverter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TemperatureConverter; sourceTree = BUILT_PRODUCTS_DIR; };
 		394CF65A25C9E650001AC9A7 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		394CF66225C9E679001AC9A7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +43,7 @@
 		394CF64E25C9E650001AC9A7 = {
 			isa = PBXGroup;
 			children = (
+				394CF66225C9E679001AC9A7 /* Extensions.swift */,
 				394CF65925C9E650001AC9A7 /* TemperatureConverter */,
 				394CF65825C9E650001AC9A7 /* Products */,
 			);
@@ -120,6 +123,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				394CF65B25C9E650001AC9A7 /* main.swift in Sources */,
+				394CF66325C9E679001AC9A7 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
