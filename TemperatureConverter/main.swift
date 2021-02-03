@@ -11,14 +11,20 @@ print("Hello, World!")
 
 //MARK: Functions
 
-/// Coverts from celcius to farenheit
-/// - Parameter temperature: the temperature in celcius that the user wants to convert from farenheit
+/// Converts from celcius to farenheit
+/// - Parameter temperature: the temperature in celcius that the user wants to convert to farenheit
 /// - Returns: temperature in farenheit
 func celciusToFarenheit(temperature: Double) -> Double {
     (temperature * (9 / 5)) + 32
 }
 
 
+/// Converts from celcius to kelvin
+/// - Parameter temperature: the temperature in celcius that the user wants to convert to kelvin
+/// - Returns: temperature in kelvin
+func celciusToKelvin(temperature: Double) -> Double {
+    temperature + 273.15
+}
 
 
 //MARK: Input
