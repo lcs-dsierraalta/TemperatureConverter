@@ -10,8 +10,6 @@ import Foundation
 print("Hello, World!")
 
 
-
-
 //MARK: Input
 //Show menu and choices
 print("Hi, I am a temperature converter")
@@ -23,9 +21,10 @@ print("3 - Farenheit to Celcius")
 print("4 - Farenheit to Kelvin")
 print("5 - Kelvin to Celcius")
 print("6 - Kelvin to Farenheit")
+print("7 - Quit")
 print("")
 //Get selection
-let convertTemperature = String.collectInput(withPrompt: "Enter choice (1/2/3/4/5/6):", acceptableValues: ["1", "2", "3", "4", "5", "6"])
+let convertTemperature = String.collectInput(withPrompt: "Enter choice (1/2/3/4/5/6/7):", acceptableValues: ["1", "2", "3", "4", "5", "6", "7"])
 
 //MARK: Process
 switch convertTemperature {
@@ -83,6 +82,9 @@ case "6":
     let result = kelvinToFarenheit(temperature: givenTemperature)
     //Output
     print("The temperature is \(result) degrees Farenheit")
+case "7":
+    print("Program ended")
+    exit(0)
 default:
     print("Enter a valid choice \n")
 }
