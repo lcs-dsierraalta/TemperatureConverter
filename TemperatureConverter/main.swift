@@ -50,6 +50,14 @@ func kelvinToCelcius(temperature: Double) -> {
 }
 
 
+/// Converts from kelvin to farenheit
+/// - Parameter temperature: the temperature in kelvin that the user wants to convert to farenheit
+/// - Returns: temperature in farenheit
+func kelvinToFarenheit(temperature: Double) -> {
+    (temperature - 273.15) * 1.8 + 32
+}
+
+
 //MARK: Input
 //Show menu and choices
 print("Hi, I am a temperature converter")
@@ -112,6 +120,15 @@ case "5":
     let result = kelvinToCelcius(temperature: givenTemperature)
     //Output
     print("The temperature is \(result) degrees Celcius")
+case "6":
+    //Input
+    print("You have chosen to convert from Kelvin to Farenheit")
+    print("")
+    let givenTemperature = Double.collectInput(withPrompt: "Enter temperature you want to convert:", minimum: nil, maximum: nil)
+    //Process
+    let result = kelvinToFarenheit(temperature: givenTemperature)
+    //Output
+    print("The temperature is \(result) degrees Farenheit")
 default:
     print("Enter a valid choice \n")
 }
