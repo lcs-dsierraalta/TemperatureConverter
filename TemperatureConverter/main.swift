@@ -52,6 +52,14 @@ case "1":
     let result = celciusToFarenheit(temperature: givenTemperature)
     //Output
     print("The temperature is \(result) degrees Farenheit")
+case "2":
+    print("You have chosen to convert from Celcius to Kelvin")
+    print("")
+    let givenTemperature = Double.collectInput(withPrompt: "Enter temperature you want to convert:", minimum: nil, maximum: nil)
+    //Process
+    let result = celciusToKelvin(temperature: givenTemperature)
+    //Output
+    print("The temperature is \(result) degrees Kelvin")
 default:
     print("Enter a valid choice \n")
 }
