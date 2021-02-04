@@ -10,7 +10,7 @@ import Foundation
 //MARK: Functions
 func convertToMeter(fromBase base: String, length: Double) -> Double {
     var meterEquivalent = 0.0
-    switch meterEquivalent {
+    switch base {
     case "1":
         meterEquivalent = length * 1000
     case "2":
@@ -31,16 +31,18 @@ func convertToMeter(fromBase base: String, length: Double) -> Double {
         meterEquivalent = length / 3.28084
     case "10":
         meterEquivalent = length / 39.3701
+    case "11":
+        exit(0)
     default:
-        break
+        print("Enter a valid input")
     }
     return meterEquivalent
 }
 
 
 func lengthConversion(toBase base: String, length: Double) -> Double {
-    var convertedValue
-    switch convertedValue {
+    var convertedValue = 0.0
+    switch base {
     case "1":
         convertedValue = length / 1000
     case "2":
@@ -61,8 +63,10 @@ func lengthConversion(toBase base: String, length: Double) -> Double {
         convertedValue = length * 3.28084
     case "10":
         convertedValue = length * 39.3701
+    case "11":
+        exit(0)
     default:
-        break
+        print("Enter a valid input")
     }
     return convertedValue
 }
@@ -83,10 +87,12 @@ print("8 - Yard")
 print("9 - Foot")
 print("10 - Inch")
 print("11 - Quit")
-let fromBase = String.collectInput(withPrompt: "Which length do you want to convert from? ", acceptableValues: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"])
+let fromBase = String.collectInput(withPrompt: "Which length do you want to convert from (1/2/3/4/5/6/7/8/9/10/11)? ", acceptableValues: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"])
 let value = Double.collectInput(withPrompt: "What length do you want to convert? ", minimum: 0.0, maximum: nil)
-let toBase = String.collectInput(withPrompt: "Which length do you want to convert to", acceptableValues: "1", "2", "3", "4", "5", "6", "7", "8", "9", "10")
-
 var meterValue = convertToMeter(fromBase: fromBase, length: value)
+let toBase = String.collectInput(withPrompt: "Which length do you want to convert to (1/2/3/4/5/6/7/8/9/10/11)? ", acceptableValues: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"])
+
+
 
 let output = lengthConversion(toBase: toBase, length: meterValue)
+print(output)
