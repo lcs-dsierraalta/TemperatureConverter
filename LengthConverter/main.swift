@@ -7,6 +7,7 @@
 
 import Foundation
 
+//MARK: Functions
 func convertToMeter(fromBase base: String, length: Double) -> Double {
     var meterEquivalent = 0.0
     switch meterEquivalent {
@@ -82,6 +83,10 @@ print("8 - Yard")
 print("9 - Foot")
 print("10 - Inch")
 print("11 - Quit")
-let from = String.collectInput(withPrompt: "Which length do you want to convert from? ", acceptableValues: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"])
+let fromBase = String.collectInput(withPrompt: "Which length do you want to convert from? ", acceptableValues: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"])
 let value = Double.collectInput(withPrompt: "What length do you want to convert? ", minimum: 0.0, maximum: nil)
-let to = String.collectInput(withPrompt: "Which length do you want to convert to", acceptableValues: "1", "2", "3", "4", "5", "6", "7", "8", "9", "10")
+let toBase = String.collectInput(withPrompt: "Which length do you want to convert to", acceptableValues: "1", "2", "3", "4", "5", "6", "7", "8", "9", "10")
+
+var meterValue = convertToMeter(fromBase: fromBase, length: value)
+
+let output = lengthConversion(toBase: toBase, length: meterValue)
