@@ -8,7 +8,32 @@
 import Foundation
 
 func convertToMeter(fromBase base: String, length: Double) -> Double {
-    var
+    var meterEquivalent = 0.0
+    switch meterEquivalent {
+    case "1":
+        meterEquivalent = length / 1000
+    case "2":
+        meterEquivalent = length
+    case "3":
+        meterEquivalent = length * 100
+    case "4":
+        meterEquivalent = length * 1000
+    case "5":
+        meterEquivalent = length * 1_000_000
+    case "6":
+        meterEquivalent = length * 1_000_000_000
+    case "7":
+        meterEquivalent = length * 1609
+    case "8":
+        meterEquivalent = length * 1.09361
+    case "9":
+        meterEquivalent = length * 3.28084
+    case "10":
+        meterEquivalent = length * 39.3701
+    default:
+        break
+    }
+    return meterEquivalent
 }
 
 //MARK: Input
